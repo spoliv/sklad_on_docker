@@ -1,0 +1,34 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="container">
+        <h3>Каталог товаров:</h3>
+
+        {% include 'mainapp/products_table_part.html' %}
+
+        <div>
+            <button type="button" class="js-create-good btn-primary active"
+                    data-url="{% url 'mainapp:add_product' %}">Добавить товар</button>
+        </div>
+    </div>
+    <br />
+    <br />
+    <footer>
+        <div class="container">
+            <div class="row">
+                <p class="copyright text-muted">Copyright &copy; Geekbrains</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="modal-good">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+

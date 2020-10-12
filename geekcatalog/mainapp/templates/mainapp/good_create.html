@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+
+    <form method="post" action="{% url 'mainapp:add_product' %}" class="js-good-create-form">
+        {% csrf_token %}
+        <div class="modal-body">
+            {{ product_form.as_p }}
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
+            <button type="submit" class="btn btn-primary">Сохранить</button>
+        </div>
+    </form>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{#{% extends 'mainapp/base.html' %}#}
+{#{% load static %}#}
+{##}
+{#{% block content %}#}
+{##}
+{#    <form class="form-horizontal" method="post">#}
+{#        {% csrf_token %}#}
+{#        {{ product_form.as_p }}#}
+{#        <br>#}
+{#        <input class="form-control" type="submit" value="Сохранить">#}
+{#    </form>#}
+{##}
+{#{% endblock %}#}
+{##}
+{##}
+{#{% block content %}#}
+{##}
+{#    <form method="post" action="{% url 'mainapp:add_product' %}" class="js-good-create-form">#}
+{#        <form method="post" action="{% url 'mainapp:add_product' %}" enctype="multipart/form-data">#}
+{#            {% csrf_token %}#}
+{#            {{ product_form.as_p }}#}
+{#        <div class="modal-footer">#}
+{#            <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>#}
+{#            <button type="submit" class="btn btn-primary">Добавить товар</button>#}
+{#        </div>#}
+{#    </form>#}
+{##}
+{#{% endblock %}#}
